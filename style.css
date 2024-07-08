@@ -1,0 +1,106 @@
+/* Estilos generales */
+
+body {
+    /*font-family: sans-serif;*/
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+    background-color: #f4f4f4; /* Color de fondo similar a apps móviles */
+    color: #333; /* Color de texto legible */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima que ocupe toda la pantalla */
+}
+
+/* .container {
+    flex: 1; Ocupe todo el espacio disponible
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+} */
+
+.container {
+    width: 50%;
+    height: 50%;; /* Altura 100% de la pantalla */
+    position: relative; /* Posición fija en la pantalla */
+    top: 50; /* Posicionamiento superior */
+    left: 50; /* Posicionamiento izquierdo */
+    bottom: 50; /* Posicionamiento inferior */
+    right: 50; /* Posicionamiento derecho */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los mensajes informativos */
+.mensajes {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#mensaje-info,
+#mensaje-error {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#mensaje-error {
+    color: red;
+}
+
+/* Estilos para los text areas */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px;
+    resize: vertical;
+    font-size: 16px;
+}
+
+/* Estilos para los botones */
+.botones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Animación de hover */
+}
+
+#btn-encriptar {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+#btn-encriptar:hover {
+    background-color: #45a049; /* Verde más oscuro */
+}
+
+#btn-desencriptar {
+    background-color: #2196F3; /* Azul */
+    color: white;
+}
+
+#btn-desencriptar:hover {
+    background-color: #1976d2; /* Azul más oscuro */
+}
+
+/* Estilos para el textarea de salida */
+#texto-salida {
+    margin-top: 20px;
+}
