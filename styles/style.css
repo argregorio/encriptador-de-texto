@@ -1,106 +1,140 @@
-/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --fuente-inter: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
-    /*font-family: sans-serif;*/
-    font-family: "Overpass", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: auto;
-    font-style: normal;
-    background-color: #f4f4f4; /* Color de fondo similar a apps móviles */
-    color: #333; /* Color de texto legible */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Altura mínima que ocupe toda la pantalla */
+  background-color: #F3F5FC;
 }
 
-/* .container {
-    flex: 1; Ocupe todo el espacio disponible
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-} */
-
-.container {
-    width: 50%;
-    height: 50%;; /* Altura 100% de la pantalla */
-    position: relative; /* Posición fija en la pantalla */
-    top: 50; /* Posicionamiento superior */
-    left: 50; /* Posicionamiento izquierdo */
-    bottom: 50; /* Posicionamiento inferior */
-    right: 50; /* Posicionamiento derecho */
+.main {
+  display: flex;
+  justify-content: space-around;
 }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.input__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Estilos para los mensajes informativos */
-.mensajes {
-    margin-bottom: 20px;
-    text-align: center;
+.output__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#mensaje-info,
-#mensaje-error {
-    font-size: 14px;
-    margin-bottom: 5px;
+.text-input {
+  width: 100%;
+  height: 25%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  font-size: 1.5rem;
+  resize: none;
+  margin-bottom: 20px;
 }
 
-#mensaje-error {
-    color: red;
+.text-output {
+  border: none;
+  resize: none;
+  width: 95%;
+  height: auto;
 }
 
-/* Estilos para los text areas */
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 10px;
-    resize: vertical;
-    font-size: 16px;
+.out__bg {
+  background-color: #fff;
+  border-radius: 32px;
+  box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+  padding: 5%;
+  text-align: center;
+  width: 400px;
+  height: 944px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Estilos para los botones */
-.botones {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.mensaje__texto {
+  /* margin-bottom: 50px; */
+  font-family: var(--fuente-inter);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-button {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px; /* Bordes redondeados */
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease; /* Animación de hover */
+.mensaje__texto2 {
+  /* margin-bottom: 50px; */
+  font-family: var(--fuente-inter);
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-#btn-encriptar {
-    background-color: #4CAF50; /* Verde */
-    color: white;
+.info__text {
+  font-family: var(--fuente-inter);
+  font-size: 12px;
+  font-weight: 400;
+  color: #495057;
 }
 
-#btn-encriptar:hover {
-    background-color: #45a049; /* Verde más oscuro */
+.btn__container {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
 }
 
-#btn-desencriptar {
-    background-color: #2196F3; /* Azul */
-    color: white;
+.btn__copy {
+  display: none;
+  margin-top: 30px;
+  background-color: #ffffff;
+  color: #0A3871;
+  font-family: var(--fuente-inter);
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 24px;
+  border-radius: 24px;
+  border: none;
+  width: 328px;
+  height: 67px;
 }
 
-#btn-desencriptar:hover {
-    background-color: #1976d2; /* Azul más oscuro */
+.btn__ecript {
+  background-color: #0A3871;
+  color: #FFFFFF;
+  font-family: var(--fuente-inter);
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 24px;
+  border-radius: 24px;
+  border: none;
+  width: 328px;
+  height: 67px;
 }
 
-/* Estilos para el textarea de salida */
-#texto-salida {
-    margin-top: 20px;
+.btn__dcript {
+  background-color: #D8DFE8;
+  color: #0A3871;
+  font-family: var(--fuente-inter);
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 24px;
+  border-radius: 24px;
+  border: none;
+  width: 328px;
+  height: 67px;
+}
+
+.btn__dcript:hover,
+.btn__ecript:hover,
+.btn__copy:hover {
+  opacity: 0.5;
 }
