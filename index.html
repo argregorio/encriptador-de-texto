@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es==mx">
+<html lang="es-mx">
 
 <head>
     <meta charset="UTF-8">
@@ -10,13 +10,10 @@
 </head>
 
 <body>
-    <div class="header">
-        <img class="logo" src="./img/logo-alura-2.png" />
-    </div>
-
-    <main class="main">
+    <main class="main__section">
         <section class="input__box">
-            <div id="textUser"></div>
+            <img class="logo" src="./img/logo-alura-2.png" />
+            <div id="advertencia"></div>
             <textarea class="text-input" id="input-texto" placeholder="Ingrese el texto aqui..."></textarea>
             <div class="info__section">
                 <img class="info__icon" src="./img/bi_exclamation-circle-fill.png">
@@ -34,6 +31,7 @@
                 <img class="img__muneco" id="img-muneco" src="./img/muneco.png">
                 <h2 class="mensaje__texto" id="outMsg">Ningún mensaje fue encontrado</h2>
                 <p class="mensaje__texto2" id="outMsg2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <p class="texto__copiado" id="copyText">Mensaje Copiado!</p>
                 <input class="btn__copy" type="submit" value="Copiar texto" id="btn-copy">
             </div>
         </section>

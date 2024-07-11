@@ -11,21 +11,27 @@
 
 body {
   background-color: #F3F5FC;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  padding: 40px;
+  padding: 0% 100% 5% 0%;
 }
 
-.main {
+.main__section {
   display: flex;
   justify-content: space-around;
+  padding: 40px;
+  height: 100%;
 }
 
 .input__box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -43,16 +49,22 @@ body {
   border-radius: 32px;
   box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
   padding: 20px;
+  font-family: var(--fuente-inter);
+  font-weight: 500;
   font-size: 1.5rem;
   resize: none;
   margin-bottom: 20px;
 }
 
 .text-output {
+  font-family: var(--fuente-inter);
+  font-weight: 500;
+  font-size: 1.5rem;
   border: none;
   resize: none;
   width: 95%;
-  height: auto;
+  text-align: center;
+  /* height: auto; */
 }
 
 .out__bg {
@@ -70,17 +82,25 @@ body {
 }
 
 .mensaje__texto {
-  /* margin-bottom: 50px; */
   font-family: var(--fuente-inter);
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 .mensaje__texto2 {
-  /* margin-bottom: 50px; */
   font-family: var(--fuente-inter);
   font-size: 1rem;
   font-weight: 400;
+  padding-top: 15%;
+}
+
+.texto__copiado{
+  font-family: var(--fuente-inter);
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: 15%;
+  display: none;
+  position: sticky;
 }
 
 .info__section {
@@ -106,7 +126,7 @@ body {
 
 .btn__copy {
   display: none;
-  margin-top: 30px;
+  margin-top: auto;
   background-color: #FFFFFF;
   color: #0A3871;
   font-family: var(--fuente-inter);
@@ -117,6 +137,8 @@ body {
   border: 1px solid;
   width: 328px;
   height: 67px;
+  top: 400px;
+  cursor: pointer;
 }
 
 .btn__ecript {
@@ -130,6 +152,7 @@ body {
   border: none;
   width: 328px;
   height: 67px;
+  cursor: pointer;
 }
 
 .btn__dcript {
@@ -143,6 +166,7 @@ body {
   border: none;
   width: 328px;
   height: 67px;
+  cursor: pointer;
 }
 
 .btn__ecript:hover {

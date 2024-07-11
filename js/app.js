@@ -5,6 +5,8 @@ const inputResultado = document.getElementById('mensaje-texto');
 const btnCopiar = document.getElementById('btn-copy');
 const outputImg = document.getElementById('img-muneco');
 const outIniMsg = document.getElementById('outMsg');
+const outIniMsgNoText = document.getElementById('outMsg2');
+const textCopy = document.getElementById('copyText');
 const soloLetras = '^[a-z ñ]+$';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,6 +37,7 @@ function encriptarTexto(e) {
     const resultado = nuevasPalabras.join(' ');
     outputImg.style.display = 'none';
     outIniMsg.style.display = 'none';
+    outIniMsgNoText.style.display = 'none';
     btnCopiar.style.display = 'block';
     inputResultado.value = resultado;
   } else {
@@ -74,12 +77,12 @@ function mostrarError(mensaje) {
   const existeError = document.querySelector('.error');
 
   if (!existeError) {
-    const textUser = document.getElementById('textUser');
+    const advertencia = document.getElementById('advertencia');
     const divMensaje = document.createElement('div');
     divMensaje.classList.add('error');
 
     divMensaje.textContent = mensaje;
-    textUser.appendChild(divMensaje);
+    advertencia.appendChild(divMensaje);
 
     setTimeout(() => {
       divMensaje.remove();
@@ -90,6 +93,10 @@ function mostrarError(mensaje) {
 function copiarTexto(e) {
   e.preventDefault();
   const mensaje = inputResultado.value;
-
   navigator.clipboard.writeText(mensaje);
+  textCopy.style.display = 'block';
+
+  // setTimeout(() => {
+  //   textCopy.style.display = 'none';
+  // }, 3000);
 }
