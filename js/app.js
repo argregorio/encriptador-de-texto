@@ -20,7 +20,10 @@ function encriptarTexto(e) {
   inputResultado.value = '';
   let texto = inputTexto.value;
 
-  if (texto.match(soloLetras) != null) {
+  if (texto.length === 0) {
+    mostrarError('Debes ingresar un mensaje');
+    return;
+  } else if (texto.match(soloLetras) != null) {
     let palabras = texto.split(' ');
     let nuevasPalabras = [];
 
@@ -30,7 +33,6 @@ function encriptarTexto(e) {
       palabra = palabra.replaceAll('a', 'ai');
       palabra = palabra.replaceAll('o', 'ober');
       palabra = palabra.replaceAll('u', 'ufat');
-
       nuevasPalabras.push(palabra);
     }
 
@@ -41,7 +43,7 @@ function encriptarTexto(e) {
     btnCopiar.style.display = 'block';
     inputResultado.value = resultado;
   } else {
-    mostrarError('Solo se permiten letras minúsculas, sin acentos, ni caracteres especiales');
+    mostrarError('Solo se permiten letras minúsculas, sin tildes, ni caracteres especiales');
     return;
   }
 }
@@ -51,7 +53,10 @@ function desencriptarTexto(e) {
   inputResultado.value = '';
   let texto = inputTexto.value;
 
-  if (texto.match(soloLetras) != null) {
+  if (texto.length === 0) {
+    mostrarError('Debes ingresar un mensaje');
+    return;
+  } else if (texto.match(soloLetras) != null) {
     let palabras = texto.split(" ");
     let nuevasPalabras = [];
 
@@ -65,10 +70,13 @@ function desencriptarTexto(e) {
     }
 
     const resultado = nuevasPalabras.join(' ');
-
+    outputImg.style.display = 'none';
+    outIniMsg.style.display = 'none';
+    outIniMsgNoText.style.display = 'none';
+    btnCopiar.style.display = 'block';
     inputResultado.value = resultado;
   } else {
-    mostrarError('Solo se permiten letras minúsculas, sin acentos');
+    mostrarError('Solo se permiten letras minúsculas, sin tildes, ni caracteres especiales');
     return;
   }
 }
@@ -96,7 +104,7 @@ function copiarTexto(e) {
   navigator.clipboard.writeText(mensaje);
   textCopy.style.display = 'block';
 
-  // setTimeout(() => {
-  //   textCopy.style.display = 'none';
-  // }, 3000);
+  setTimeout(() => {
+    textCopy.style.display = 'none';
+  }, 3000);
 }
