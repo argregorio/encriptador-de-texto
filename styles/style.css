@@ -36,7 +36,8 @@ body {
 
 .slot__alerta {
   position: fixed;
-  top: 63%;
+  top: 58%;
+  z-index: 1;
 }
 
 .error {
