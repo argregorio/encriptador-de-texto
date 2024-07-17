@@ -36,7 +36,7 @@ body {
 
 .slot__alerta {
   position: fixed;
-  top: 58%;
+  top: 62%;
   z-index: 1;
 }
 
@@ -251,11 +251,17 @@ body {
     flex-direction: column;
   }
 
+  .slot__alerta {
+    position: fixed;
+    top: 50%;
+    z-index: 1;
+  }
+
   .output__box {
     height: 100%;
     max-height: 343px;
     min-height: 383px;
-    margin-top: 71px;
+    margin-top: 34px;
   }
 
   .input__box,
@@ -265,7 +271,6 @@ body {
 
   .text-input {
     min-height: 288px;
-    margin-bottom: 342px;
   }
 
   .btn__container {
@@ -317,7 +322,7 @@ body {
     height: 100%;
     max-height: 343px;
     min-height: 383px;
-    margin-top: 158px;
+    margin-top: 34px;
   }
 
   .input__box,
@@ -327,7 +332,6 @@ body {
 
   .text-input {
     min-height: 288px;
-    margin-bottom: 342px;
   }
 
   .btn__container {
