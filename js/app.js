@@ -76,7 +76,7 @@ function desencriptarTexto(e) {
     btnCopiar.style.display = 'block';
     inputResultado.value = resultado;
   } else {
-    mostrarError('Solo se permiten letras minúsculas, sin tildes, ni caracteres especiales');
+    mostrarError('Solo se permiten letras minúsculas, sin tildes, ni caracteres especiales.');
     return;
   }
 }
@@ -92,9 +92,9 @@ function mostrarError(mensaje) {
     divMensaje.textContent = mensaje;
     advertencia.appendChild(divMensaje);
 
-    setTimeout(() => {
-      divMensaje.remove();
-    }, 3500);
+    // setTimeout(() => {
+    //   divMensaje.remove();
+    // }, 3500);
   }
 }
 
@@ -102,9 +102,11 @@ function copiarTexto(e) {
   e.preventDefault();
   const mensaje = inputResultado.value;
   navigator.clipboard.writeText(mensaje);
+  inputResultado.style.display = 'none';
   textCopy.style.display = 'block';
 
   setTimeout(() => {
     textCopy.style.display = 'none';
+    inputResultado.style.display = 'block';
   }, 3000);
 }
