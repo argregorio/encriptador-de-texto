@@ -20,8 +20,11 @@ body {
 }
 
 .logo {
+  width: 100%;
+  height: 100%;
   max-width: 120px;
   max-height: 48px;
+  margin-bottom: 80px;
 }
 
 .main__section {
@@ -31,11 +34,9 @@ body {
   width: 100%;
 }
 
-.input__box {
-  min-width: 400px;
-  /* min-height: 944px; */
-  width: 100%;
-  height: 100%;
+.slot__alerta {
+  position: fixed;
+  top: 63%;
 }
 
 .error {
@@ -43,9 +44,16 @@ body {
   font-family: var(--fuente-inter);
   font-size: 1.25rem;
   font-weight: 700;
-  border-radius: 24px;
+  border-radius: 32px;
   padding: 20px;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.input__box {
+  min-width: 400px;
+  width: 100%;
+  height: 100%;
 }
 
 .text-input {
@@ -132,7 +140,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 40px; */
 }
 
 .output__box {
@@ -176,6 +183,7 @@ body {
   width: 95%;
   height: 75%;
   text-align: center;
+  display: none;
 }
 
 .mensaje__textoOut {
@@ -231,26 +239,26 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .logo {
+    width: 100%;
+    height: 100%;
+    max-width: 60px;
+    max-height: 24px;
+  }
+
   .main__section {
     flex-direction: column;
-    padding: 40px;
-    height: 100%;
-    width: 100%;
   }
 
-  .input__box {
-    margin-bottom: 64px;
-  }
-
-  .output__box{
+  .output__box {
     height: 100%;
     max-height: 343px;
     min-height: 383px;
+    margin-top: 71px;
   }
 
   .input__box,
   .output__box {
-    /* width: 90%; */
     margin-right: 0;
   }
 
@@ -276,6 +284,7 @@ body {
     height: 100%;
     text-align: center;
     margin-bottom: 32px;
+    display: none;
   }
 
   .out__bg {
@@ -284,7 +293,6 @@ body {
     max-width: 688px;
     min-height: 343px;
     max-height: 343px;
-    /* margin-top: 64px; */
   }
 
   .img__muneco {
@@ -293,32 +301,61 @@ body {
 }
 
 @media (max-width: 768px) {
+  .logo {
+    width: 100%;
+    height: 100%;
+    max-width: 60px;
+    max-height: 24px;
+  }
+
+  .main__section {
+    flex-direction: column;
+  }
+
+  .output__box {
+    height: 100%;
+    max-height: 343px;
+    min-height: 383px;
+    margin-top: 158px;
+  }
 
   .input__box,
   .output__box {
-    padding: 10px;
+    margin-right: 0;
   }
 
   .text-input {
-    font-size: 18px;
+    min-height: 288px;
+    margin-bottom: 342px;
   }
 
   .btn__container {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
   }
 
-  .mensaje__texto {
-    font-size: 20px;
+  .text-output {
+    display: flex;
+    font-family: var(--fuente-inter);
+    font-weight: 500;
+    font-size: 1.5rem;
+    border: none;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+    display: none;
   }
 
-  .mensaje__texto2 {
-    font-size: 14px;
-  }
-
-  .btn__copy {
-    padding: 15px 0;
-    font-size: 14px;
+  .out__bg {
+    width: 100%;
+    height: 100%;
+    max-width: 688px;
+    min-height: 343px;
+    max-height: 343px;
   }
 
   .img__muneco {
@@ -335,23 +372,12 @@ body {
     height: auto;
   }
 
-  .logo {
-    width: 80px;
-  }
-
-  .text-input {
-    height: 200px;
-    font-size: 16px;
-  }
-
-  .info__text {
-    font-size: 16px;
-    padding: 10px;
+  .output__box {
+    margin-top: 22px;
   }
 
   .btn__container {
     padding: 12px;
-    font-size: 16px;
   }
 
   .img__muneco {

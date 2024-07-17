@@ -7,6 +7,7 @@ const outputImg = document.getElementById('img-muneco');
 const outIniMsg = document.getElementById('outMsg');
 const outIniMsgNoText = document.getElementById('outMsg2');
 const textCopy = document.getElementById('copyText');
+const mostrarOutPut = document.getElementById('mensaje-texto');
 const soloLetras = '^[a-z ñ]+$';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,6 +41,7 @@ function encriptarTexto(e) {
     outputImg.style.display = 'none';
     outIniMsg.style.display = 'none';
     outIniMsgNoText.style.display = 'none';
+    mostrarOutPut.style.display = 'block';
     btnCopiar.style.display = 'block';
     inputResultado.value = resultado;
   } else {
@@ -73,6 +75,7 @@ function desencriptarTexto(e) {
     outputImg.style.display = 'none';
     outIniMsg.style.display = 'none';
     outIniMsgNoText.style.display = 'none';
+    mostrarOutPut.style.display = 'block';
     btnCopiar.style.display = 'block';
     inputResultado.value = resultado;
   } else {
@@ -92,9 +95,9 @@ function mostrarError(mensaje) {
     divMensaje.textContent = mensaje;
     advertencia.appendChild(divMensaje);
 
-    // setTimeout(() => {
-    //   divMensaje.remove();
-    // }, 3500);
+    setTimeout(() => {
+      divMensaje.remove();
+    }, 3500);
   }
 }
 
